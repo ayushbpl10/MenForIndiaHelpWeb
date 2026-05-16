@@ -116,10 +116,12 @@ body {
 .nav-btn {
     background: var(--teal);
     color: white !important;
-    padding: 10px 24px;
+    padding: 10px 20px;
     border-radius: 100px;
     font-weight: 600 !important;
     box-shadow: 0 4px 14px rgba(26, 127, 168, 0.3);
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 .nav-btn:hover {
@@ -479,31 +481,240 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE — Tablet (≤ 900px)
+   ============================================ */
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 40px;
+        padding: 40px 20px 60px;
+        gap: 40px;
+        min-height: auto;
     }
-    
+
     .hero h1 {
-        font-size: 42px;
+        font-size: 40px;
+        letter-spacing: -1px;
     }
-    
+
     .hero p {
         margin: 0 auto 32px;
+        font-size: 17px;
     }
-    
+
     .hero-actions {
         justify-content: center;
     }
-    
+
     .hero-visual {
         display: none;
     }
-    
+
+    /* Hide plain nav links, keep the CTA button */
     .desktop-nav a:not(.nav-btn) {
         display: none;
+    }
+
+    .desktop-nav {
+        gap: 0;
+    }
+
+    .features {
+        padding: 70px 20px;
+    }
+
+    .glass-panel {
+        padding: 40px 28px;
+    }
+
+    .about {
+        padding: 40px 20px 80px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Mobile (≤ 600px)
+   ============================================ */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 0;
+    }
+
+    .logo {
+        font-size: 16px;
+        gap: 7px;
+    }
+
+    .logo ion-icon {
+        font-size: 22px;
+    }
+
+    /* Make nav-btn smaller so it fits beside the logo */
+    .nav-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+        letter-spacing: -0.2px;
+    }
+
+    .hero {
+        padding: 28px 16px 50px;
+        gap: 28px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        letter-spacing: -0.5px;
+        line-height: 1.15;
+    }
+
+    .hero p {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .trust-strip {
+        font-size: 11px;
+        justify-content: center;
+        gap: 6px;
+        line-height: 1.7;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+    }
+
+    .features {
+        padding: 50px 16px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 24px 20px;
+    }
+
+    .glass-panel {
+        padding: 28px 20px;
+        border-radius: 20px;
+    }
+
+    .glass-panel h2 {
+        font-size: 24px;
+    }
+
+    .glass-panel p {
+        font-size: 15px;
+    }
+
+    .about {
+        padding: 30px 16px 60px;
+    }
+
+    footer {
+        padding: 50px 16px 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 28px;
+        margin-bottom: 36px;
+    }
+
+    .footer-links {
+        gap: 28px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding-top: 24px;
+    }
+
+    /* Reduce background blur shapes so they don't cause horizontal scroll */
+    .shape-1, .shape-2, .shape-3 {
+        opacity: 0.25;
+    }
+
+    .shape-1 {
+        width: 220px;
+        height: 220px;
+        right: -60px;
+        top: -60px;
+    }
+
+    .shape-2 {
+        width: 260px;
+        height: 260px;
+        left: -100px;
+    }
+
+    .shape-3 {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Small phones (≤ 400px)
+   ============================================ */
+@media (max-width: 400px) {
+    .logo span {
+        /* Shorten text so it doesn't crowd nav-btn */
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        padding: 7px 11px;
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .btn {
+        padding: 13px 20px;
+        font-size: 13px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
+
+    .glass-panel h2 {
+        font-size: 20px;
+    }
+
+    .owner-tag {
+        padding: 8px 14px;
+    }
+
+    .owner-tag p {
+        font-size: 12px;
     }
 }
