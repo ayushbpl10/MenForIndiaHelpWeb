@@ -920,6 +920,21 @@ footer {
     border-left: 4px solid #059669;
 }
 
+.security-notice {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--light-cyan);
+    opacity: 0.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 900px) {
     .showcase-grid {
         flex-direction: column;
