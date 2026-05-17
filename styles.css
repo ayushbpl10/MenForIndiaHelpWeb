@@ -864,6 +864,62 @@ footer {
     font-weight: 700;
 }
 
+/* Tester Section */
+.tester-section {
+    margin: 40px auto 60px;
+}
+
+.tester-card {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 1px solid #10b981;
+    padding: 48px;
+    border-radius: 32px;
+    text-align: left;
+    box-shadow: 0 20px 48px rgba(16, 185, 129, 0.15);
+}
+
+.tester-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.tester-header .play-icon {
+    font-size: 36px;
+    color: #059669;
+}
+
+.tester-header h2 {
+    font-size: 28px;
+    color: #065f46;
+    margin: 0;
+}
+
+.tester-card p {
+    font-size: 16px;
+    color: #047857;
+    margin-bottom: 32px;
+    max-width: 800px;
+}
+
+.tester-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.tester-footer p {
+    font-size: 14px;
+    color: #065f46;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px 20px;
+    border-radius: 12px;
+    border-left: 4px solid #059669;
+}
+
 @media (max-width: 900px) {
     .showcase-grid {
         flex-direction: column;
@@ -871,5 +927,14 @@ footer {
     }
     .showcase-tab:hover {
         transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 600px) {
+    .tester-card {
+        padding: 28px 20px;
+    }
+    .tester-header h2 {
+        font-size: 22px;
     }
 }
