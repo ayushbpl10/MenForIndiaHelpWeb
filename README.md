@@ -1,6 +1,6 @@
 # ForMenIndiaHelp — Official Web Portal 🌐
 
-![Version](https://img.shields.io/badge/version-3.0.0-0d3b5c?style=for-the-badge&logo=html5)
+![Version](https://img.shields.io/badge/version-1.1.0-0d3b5c?style=for-the-badge&logo=html5)
 ![Security](https://img.shields.io/badge/security-Ultra_Strict_CSP-0d9668?style=for-the-badge)
 ![Deployment](https://img.shields.io/badge/deployment-GitHub_Pages-1a7fa8?style=for-the-badge&logo=github)
 ![License](https://img.shields.io/badge/license-Registered%20Copyright-c0392b?style=for-the-badge)
@@ -19,10 +19,10 @@ This repository contains the official promotional web portal and legal policy hu
 A stunning glassmorphic phone frame preview section with interactive tab switching (`📊 Main Dashboard`, `🚨 Emergency Helplines`, `🛡️ Suicide Prevention`). Smooth JavaScript fade transitions dynamically load the corresponding real app screenshot inside the device frame.
 
 ### ⚡ 2. Published Features Grid (`#features`)
-Showcases all v3.0 offline legal knowledge bases, AI emotional counselling bot, eCourts portal, Kanoon live search, and multi-lingual audio guides.
+Showcases all v1.1 offline legal knowledge bases, AI emotional counselling bot, eCourts portal, Kanoon live search, and multi-lingual audio guides.
 
 ### 🚀 3. Innovation Pipeline / Roadmap (`#roadmap`)
-Highlights upcoming v4.0+ features including the encrypted case evidence vault, pro-bono advocate network, and peer support community forums.
+Highlights upcoming v2.0+ features including the encrypted case evidence vault, pro-bono advocate network, and peer support community forums.
 
 ### 📜 4. Uniform Legal Policy Hub
 Provides standardized, easily accessible web versions of all mandatory legal policies required by the Google Play Store and Indian regulatory authorities.
