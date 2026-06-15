@@ -33,10 +33,11 @@
                 <span>ForMenIndiaHelp</span>
             </div>
             <nav class="desktop-nav">
-                <a href="#features">Features</a>
-                <a href="#about">About</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="#tester-optin" class="nav-btn">Join Beta Testing</a>
+                <a href="#features" data-i18n="nav_features">Features</a>
+                <a href="#about" data-i18n="nav_about">About</a>
+                <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+                <button id="lang-toggle" class="lang-btn" onclick="toggleLang()" aria-label="Switch Language">🇮🇳 हिन्दी</button>
+                <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="nav-btn" data-i18n="nav_download">Download on Play Store</a>
             </nav>
         </div>
     </header>
@@ -44,17 +45,17 @@
     <main>
         <section class="hero container">
             <div class="hero-content">
-                <div class="badge">v5 — Now on Google Play (Closed Testing)</div>
-                <h1>Empowering Men with <span class="highlight">Legal Knowledge</span></h1>
-                <p>A comprehensive support application designed to educate and assist you regarding your legal rights in India. Navigate complex legal situations with confidence.</p>
+                <div class="badge badge-live" data-i18n="hero_badge">🎉 v5 — Now Publicly Available on Google Play!</div>
+                <h1 data-i18n="hero_h1">Empowering Men with <span class="highlight">Legal Knowledge</span></h1>
+                <p data-i18n="hero_p">A comprehensive support application designed to educate and assist you regarding your legal rights in India. Navigate complex legal situations with confidence.</p>
                 <div class="hero-actions" id="download">
-                    <a href="#tester-optin" class="btn btn-primary">
-                        <ion-icon name="logo-google-playstore"></ion-icon> Get Beta Access
+                    <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <ion-icon name="logo-google-playstore"></ion-icon> <span data-i18n="hero_btn">Download Free on Google Play</span>
                     </a>
                 </div>
                 <div class="trust-strip">
                     <span class="trust-dot"></span>
-                    <strong>Now live on Google Play</strong> &nbsp;·&nbsp; Closed Testing Phase &nbsp;·&nbsp; Android 8.0+ &nbsp;·&nbsp; Free
+                    <strong data-i18n="trust_live">✅ Publicly Live on Google Play</strong> &nbsp;·&nbsp; <span data-i18n="trust_phase">Free Download</span> &nbsp;·&nbsp; Android 8.0+ &nbsp;·&nbsp; Free
                 </div>
             </div>
             <div class="hero-visual">
@@ -83,23 +84,23 @@
             </div>
         </section>
 
-        <!-- Closed Testing Opt-In Banner -->
+        <!-- Download Section -->
         <section class="tester-section container" id="tester-optin">
             <div class="tester-card glass-panel">
                 <div class="tester-header">
                     <ion-icon name="logo-google-playstore" class="play-icon"></ion-icon>
-                    <h2>🚀 Self-Serve Beta Access: Become a Tester!</h2>
+                    <h2>🎉 <span data-i18n="tester_h2">ForMenIndiaHelp is Now Live on Google Play!</span></h2>
                 </div>
-                <p>We are currently in Google Play Closed Testing and need 20 active testers to publish the app publicly. Access is fully automated! Follow the 3 simple steps below to join the testing group and download the app instantly on your Android device.</p>
+                <p data-i18n="tester_intro">The app is now publicly available — no invite or sign-up needed! Simply tap the button below to install it free on any Android 8.0+ device. Help us grow by sharing with friends and family.</p>
                 
                 <div class="tester-steps">
                     <div class="tester-step-item">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h3>Join the Google Group</h3>
-                            <p>Click below to join our official Google Group with your Android device's Google Account. This grants your email immediate beta permission.</p>
-                            <a href="https://groups.google.com/g/formenindiahelp-testers" target="_blank" rel="noopener noreferrer" class="btn btn-step">
-                                <ion-icon name="people-outline"></ion-icon> Join Google Group
+                            <h3 data-i18n="step1_h">Open Google Play Store</h3>
+                            <p data-i18n="step1_p">Tap the button below on your Android phone. It will open the official ForMenIndiaHelp listing on the Google Play Store.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="btn btn-step btn-primary-step">
+                                <ion-icon name="logo-google-playstore"></ion-icon> <span data-i18n="step1_btn">Download on Google Play</span>
                             </a>
                         </div>
                     </div>
@@ -107,10 +108,10 @@
                     <div class="tester-step-item">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>Opt-in as a Tester</h3>
-                            <p>Once you are a group member, click below to visit the official Google Play opt-in page and click the <strong>"Become a Tester"</strong> button.</p>
-                            <a href="https://play.google.com/apps/testing/com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="btn btn-step">
-                                <ion-icon name="checkmark-circle-outline"></ion-icon> Opt-In on Google Play
+                            <h3 data-i18n="step2_h">Install & Explore</h3>
+                            <p data-i18n="step2_p">Tap <strong>"Install"</strong> and start exploring legal guides, AI counselling, emergency SOS, court judgment search, and much more — completely free.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="btn btn-step">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon> <span data-i18n="step2_btn">View on Play Store</span>
                             </a>
                         </div>
                     </div>
@@ -118,69 +119,69 @@
                     <div class="tester-step-item">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h3>Download on Play Store</h3>
-                            <p>After opting in, click below to open the Google Play Store link on your Android phone to install the app and begin testing.</p>
-                            <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="btn btn-step btn-primary-step">
-                                <ion-icon name="logo-google-playstore"></ion-icon> Download App
+                            <h3 data-i18n="step3_h">Share & Support</h3>
+                            <p data-i18n="step3_p">Help other men in India discover this resource! Share the Play Store link with friends, family, or any community that could benefit.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="btn btn-step">
+                                <ion-icon name="share-social-outline"></ion-icon> <span data-i18n="step3_btn">Share the App</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="tester-footer" style="margin-top: 32px;">
-                    <p>💡 <strong>Note:</strong> You must be logged into the same Google Account on Google Groups, Google Play Store, and your Android phone. Please keep the app installed for 14 days to help us meet Google's production requirements!</p>
+                    <p data-i18n="tester_note">⭐ <strong>Leave a Review:</strong> If you find the app helpful, please leave a 5-star rating and review on the Play Store. It helps more men in India discover this resource!</p>
                 </div>
             </div>
         </section>
 
         <section id="features" class="features container">
             <div class="section-header">
-                <div class="badge">Published Features (v5)</div>
-                <h2>Powerful Tools Right in Your Pocket</h2>
-                <p>Designed specifically to educate, protect, and support men in distress.</p>
+                <div class="badge" data-i18n="feat_badge">Published Features (v5)</div>
+                <h2 data-i18n="feat_h2">Powerful Tools Right in Your Pocket</h2>
+                <p data-i18n="feat_p">Designed specifically to educate, protect, and support men in distress.</p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="icon-wrapper bg-blue">
                         <ion-icon name="book-outline"></ion-icon>
                     </div>
-                    <h3>Offline Legal Knowledge Base</h3>
-                    <p>Read extensive guides on sections like 498A IPC, CrPC 125, DV Act, and Child Custody without needing an active internet connection.</p>
+                    <h3 data-i18n="f1_h">Offline Legal Knowledge Base</h3>
+                    <p data-i18n="f1_p">Read extensive guides on sections like 498A IPC, CrPC 125, DV Act, and Child Custody without needing an active internet connection.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-wrapper bg-green">
                         <ion-icon name="chatbubbles-outline"></ion-icon>
                     </div>
-                    <h3>AI Emotional Counselling Bot</h3>
-                    <p>Powered by Google Gemini. Tailored mental health support utilizing evidence-based CBT, ACT, and DBT TIPP crisis frameworks.</p>
+                    <h3 data-i18n="f2_h">AI Emotional Counselling Bot</h3>
+                    <p data-i18n="f2_p">Powered by Google Gemini. Tailored mental health support utilizing evidence-based CBT, ACT, and DBT TIPP crisis frameworks.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-wrapper bg-cyan">
                         <ion-icon name="globe-outline"></ion-icon>
                     </div>
-                    <h3>In-App eCourts Portal & CNR Assistant</h3>
-                    <p>Directly access the official Indian Judiciary portal with a 1-Click Smart CNR Copy Assistant powered by expo-clipboard.</p>
+                    <h3 data-i18n="f3_h">In-App eCourts Portal & CNR Assistant</h3>
+                    <p data-i18n="f3_p">Directly access the official Indian Judiciary portal with a 1-Click Smart CNR Copy Assistant powered by expo-clipboard.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-wrapper bg-blue">
                         <ion-icon name="library-outline"></ion-icon>
                     </div>
-                    <h3>IndianKanoon Live Search & Modal</h3>
-                    <p>Search verified Supreme Court and High Court judgments in real-time with clean, native in-app reading modals.</p>
+                    <h3 data-i18n="f4_h">IndianKanoon Live Search & Modal</h3>
+                    <p data-i18n="f4_p">Search verified Supreme Court and High Court judgments in real-time with clean, native in-app reading modals.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-wrapper bg-red">
                         <ion-icon name="volume-high-outline"></ion-icon>
                     </div>
-                    <h3>Multi-lingual Audio Guides</h3>
-                    <p>Listen to legal summaries and step-by-step procedures in English, Hindi, and regional languages while on the go.</p>
+                    <h3 data-i18n="f5_h">Multi-lingual Audio Guides</h3>
+                    <p data-i18n="f5_p">Listen to legal summaries and step-by-step procedures in English, Hindi, and regional languages while on the go.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-wrapper bg-green">
                         <ion-icon name="shield-checkmark-outline"></ion-icon>
                     </div>
-                    <h3>1-Click API Onboarding</h3>
-                    <p>Hassle-free setup for Google AI Studio and IndianKanoon API tokens with visual 3-step configuration guides.</p>
+                    <h3 data-i18n="f6_h">1-Click API Onboarding</h3>
+                    <p data-i18n="f6_p">Hassle-free setup for Google AI Studio and IndianKanoon API tokens with visual 3-step configuration guides.</p>
                 </div>
             </div>
         </section>
@@ -286,10 +287,10 @@
 
         <section id="about" class="about container">
             <div class="glass-panel">
-                <h2>Why we built this</h2>
-                <p>Navigating the legal system can be overwhelming. This app was built to provide an accessible, organized, and reliable source of educational legal content and mental health support for men in India.</p>
+                <h2 data-i18n="about_h2">Why we built this</h2>
+                <p data-i18n="about_p">Navigating the legal system can be overwhelming. This app was built to provide an accessible, organized, and reliable source of educational legal content and mental health support for men in India.</p>
                 <div class="owner-tag">
-                    <p>Registered Copyright &copy; 2026 ForMenIndiaHelp. All rights reserved.</p>
+                    <p data-i18n="about_copy">Registered Copyright &copy; 2026 ForMenIndiaHelp. All rights reserved.</p>
                 </div>
             </div>
         </section>
@@ -302,28 +303,106 @@
                     <ion-icon name="shield-checkmark"></ion-icon>
                     <span>ForMenIndiaHelp</span>
                 </div>
-                <p>Empowering through education.</p>
+                <p data-i18n="footer_tag">Empowering through education.</p>
             </div>
             <div class="footer-links">
                 <div class="link-group">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="copyright.html">Copyright Policy</a>
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="terms.html" data-i18n="footer_terms">Terms of Service</a>
+                    <a href="copyright.html" data-i18n="footer_copy">Copyright Policy</a>
                 </div>
                 <div class="link-group">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer_contact">Contact</h4>
                     <a href="mailto:thegdportfolio@gmail.com">thegdportfolio@gmail.com</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ForMenIndiaHelp. Not professional legal advice.</p>
+            <p data-i18n="footer_copy_notice">&copy; 2026 ForMenIndiaHelp. Not professional legal advice.</p>
             <p class="security-notice">🔒 <strong>Security & Anti-Scraping Notice:</strong> Automated scraping, bot harvesting, or unauthorized reverse-engineering of ForMenIndiaHelp web assets, API endpoints, or legal databases is strictly prohibited. All API requests are protected by strict rate limiting (Max 10-15 requests/min) and prompt injection detection algorithms. Violators will be permanently blacklisted.</p>
         </div>
     </footer>
 
     <script>
+        // ── i18n Translation System ──────────────────────────────────────
+        const translations = {
+            en: {
+                nav_features: 'Features', nav_about: 'About', nav_privacy: 'Privacy', nav_download: 'Download on Play Store',
+                hero_badge: '🎉 v5 — Now Publicly Available on Google Play!',
+                hero_h1: 'Empowering Men with <span class="highlight">Legal Knowledge</span>',
+                hero_p: 'A comprehensive support application designed to educate and assist you regarding your legal rights in India. Navigate complex legal situations with confidence.',
+                hero_btn: 'Download Free on Google Play',
+                trust_live: '✅ Publicly Live on Google Play', trust_phase: 'Free Download',
+                tester_h2: 'ForMenIndiaHelp is Now Live on Google Play!',
+                tester_intro: 'The app is now publicly available — no invite or sign-up needed! Simply tap the button below to install it free on any Android 8.0+ device. Help us grow by sharing with friends and family.',
+                step1_h: 'Open Google Play Store', step1_p: 'Tap the button below on your Android phone. It will open the official ForMenIndiaHelp listing on the Google Play Store.', step1_btn: 'Download on Google Play',
+                step2_h: 'Install & Explore', step2_p: 'Tap <strong>"Install"</strong> and start exploring legal guides, AI counselling, emergency SOS, court judgment search, and much more — completely free.', step2_btn: 'View on Play Store',
+                step3_h: 'Share & Support', step3_p: 'Help other men in India discover this resource! Share the Play Store link with friends, family, or any community that could benefit.', step3_btn: 'Share the App',
+                tester_note: '⭐ <strong>Leave a Review:</strong> If you find the app helpful, please leave a 5-star rating and review on the Play Store. It helps more men in India discover this resource!',
+                feat_badge: 'Published Features (v5)', feat_h2: 'Powerful Tools Right in Your Pocket', feat_p: 'Designed specifically to educate, protect, and support men in distress.',
+                f1_h: 'Offline Legal Knowledge Base', f1_p: 'Read extensive guides on sections like 498A IPC, CrPC 125, DV Act, and Child Custody without needing an active internet connection.',
+                f2_h: 'AI Emotional Counselling Bot', f2_p: 'Powered by Google Gemini. Tailored mental health support utilizing evidence-based CBT, ACT, and DBT TIPP crisis frameworks.',
+                f3_h: 'In-App eCourts Portal & CNR Assistant', f3_p: 'Directly access the official Indian Judiciary portal with a 1-Click Smart CNR Copy Assistant powered by expo-clipboard.',
+                f4_h: 'IndianKanoon Live Search & Modal', f4_p: 'Search verified Supreme Court and High Court judgments in real-time with clean, native in-app reading modals.',
+                f5_h: 'Multi-lingual Audio Guides', f5_p: 'Listen to legal summaries and step-by-step procedures in English, Hindi, and regional languages while on the go.',
+                f6_h: '1-Click API Onboarding', f6_p: 'Hassle-free setup for Google AI Studio and IndianKanoon API tokens with visual 3-step configuration guides.',
+                about_h2: 'Why we built this', about_p: 'Navigating the legal system can be overwhelming. This app was built to provide an accessible, organized, and reliable source of educational legal content and mental health support for men in India.',
+                about_copy: 'Registered Copyright © 2026 ForMenIndiaHelp. All rights reserved.',
+                footer_tag: 'Empowering through education.', footer_legal: 'Legal', footer_privacy: 'Privacy Policy', footer_terms: 'Terms of Service', footer_copy: 'Copyright Policy', footer_contact: 'Contact',
+                footer_copy_notice: '© 2026 ForMenIndiaHelp. Not professional legal advice.'
+            },
+            hi: {
+                nav_features: 'सुविधाएं', nav_about: 'हमारे बारे में', nav_privacy: 'गोपनीयता', nav_download: 'Play Store पर डाउनलोड करें',
+                hero_badge: '🎉 v5 — अब Google Play पर सार्वजनिक रूप से उपलब्ध!',
+                hero_h1: 'पुरुषों को <span class="highlight">कानूनी ज्ञान</span> से सशक्त बनाना',
+                hero_p: 'भारत में आपके कानूनी अधिकारों के बारे में शिक्षित करने और सहायता करने के लिए बनाया गया एक व्यापक ऐप। आत्मविश्वास के साथ जटिल कानूनी परिस्थितियों में आगे बढ़ें।',
+                hero_btn: 'Google Play पर मुफ्त डाउनलोड करें',
+                trust_live: '✅ Google Play पर सार्वजनिक रूप से लाइव', trust_phase: 'मुफ्त डाउनलोड',
+                tester_h2: 'ForMenIndiaHelp अब Google Play पर लाइव है!',
+                tester_intro: 'ऐप अब सार्वजनिक रूप से उपलब्ध है — किसी आमंत्रण या साइन-अप की ज़रूरत नहीं! किसी भी Android 8.0+ डिवाइस पर मुफ्त में इंस्टॉल करने के लिए नीचे बटन दबाएं।',
+                step1_h: 'Google Play Store खोलें', step1_p: 'अपने Android फोन पर नीचे दिए बटन को दबाएं। यह Google Play Store पर ForMenIndiaHelp की आधिकारिक लिस्टिंग खोलेगा।', step1_btn: 'Google Play पर डाउनलोड करें',
+                step2_h: 'इंस्टॉल करें और खोजें', step2_p: '<strong>"Install"</strong> दबाएं और कानूनी गाइड, AI काउंसलिंग, इमरजेंसी SOS, कोर्ट जजमेंट सर्च और बहुत कुछ एक्सप्लोर करें — बिल्कुल मुफ्त।', step2_btn: 'Play Store पर देखें',
+                step3_h: 'शेयर करें और सहायता करें', step3_p: 'भारत के अन्य पुरुषों को यह संसाधन खोजने में मदद करें! Play Store लिंक दोस्तों, परिवार या किसी भी समुदाय के साथ शेयर करें।', step3_btn: 'ऐप शेयर करें',
+                tester_note: '⭐ <strong>समीक्षा छोड़ें:</strong> यदि आपको ऐप सहायक लगे, तो Play Store पर 5-स्टार रेटिंग और समीक्षा दें। इससे भारत के अधिक पुरुष इस संसाधन को खोज सकेंगे!',
+                feat_badge: 'प्रकाशित सुविधाएं (v5)', feat_h2: 'आपकी जेब में शक्तिशाली उपकरण', feat_p: 'विशेष रूप से संकट में पुरुषों को शिक्षित, सुरक्षित और सहायता करने के लिए बनाया गया।',
+                f1_h: 'ऑफलाइन कानूनी ज्ञान आधार', f1_p: 'इंटरनेट कनेक्शन की आवश्यकता के बिना 498A IPC, CrPC 125, DV Act और बाल हिरासत पर विस्तृत गाइड पढ़ें।',
+                f2_h: 'AI भावनात्मक परामर्श बॉट', f2_p: 'Google Gemini द्वारा संचालित। CBT, ACT और DBT TIPP संकट ढांचे का उपयोग करते हुए अनुकूलित मानसिक स्वास्थ्य सहायता।',
+                f3_h: 'इन-ऐप eCourts पोर्टल और CNR सहायक', f3_p: 'expo-clipboard द्वारा संचालित 1-क्लिक स्मार्ट CNR कॉपी सहायक के साथ आधिकारिक भारतीय न्यायपालिका पोर्टल तक सीधी पहुंच।',
+                f4_h: 'IndianKanoon लाइव सर्च और मोडल', f4_p: 'स्वच्छ, नेटिव इन-ऐप रीडिंग मोडल के साथ रियल-टाइम में सुप्रीम कोर्ट और हाई कोर्ट के निर्णय खोजें।',
+                f5_h: 'बहुभाषी ऑडियो गाइड', f5_p: 'चलते-फिरते अंग्रेजी, हिंदी और क्षेत्रीय भाषाओं में कानूनी सारांश और चरण-दर-चरण प्रक्रियाएं सुनें।',
+                f6_h: '1-क्लिक API ऑनबोर्डिंग', f6_p: 'दृश्य 3-चरण कॉन्फ़िगरेशन गाइड के साथ Google AI Studio और IndianKanoon API टोकन के लिए आसान सेटअप।',
+                about_h2: 'हमने यह क्यों बनाया', about_p: 'कानूनी प्रणाली को नेविगेट करना भारी पड़ सकता है। यह ऐप भारत में पुरुषों को सुलभ, व्यवस्थित और विश्वसनीय कानूनी सामग्री और मानसिक स्वास्थ्य सहायता प्रदान करने के लिए बनाया गया था।',
+                about_copy: 'पंजीकृत कॉपीराइट © 2026 ForMenIndiaHelp. सर्वाधिकार सुरक्षित।',
+                footer_tag: 'शिक्षा के माध्यम से सशक्तिकरण।', footer_legal: 'कानूनी', footer_privacy: 'गोपनीयता नीति', footer_terms: 'सेवा की शर्तें', footer_copy: 'कॉपीराइट नीति', footer_contact: 'संपर्क',
+                footer_copy_notice: '© 2026 ForMenIndiaHelp. यह पेशेवर कानूनी सलाह नहीं है।'
+            }
+        };
+
+        let currentLang = localStorage.getItem('fmih_lang') || 'en';
+
+        function applyTranslations(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+            const btn = document.getElementById('lang-toggle');
+            if (btn) btn.textContent = lang === 'en' ? '🇮🇳 हिन्दी' : '🇬🇧 English';
+            document.title = lang === 'hi' ? 'ForMenIndiaHelp - कानूनी ज्ञान और सहायता' : 'ForMenIndiaHelp - Legal Knowledge & Support';
+        }
+
+        function toggleLang() {
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            localStorage.setItem('fmih_lang', currentLang);
+            applyTranslations(currentLang);
+        }
+
+        // Apply saved language on load
+        applyTranslations(currentLang);
+
         document.addEventListener('DOMContentLoaded', () => {
             // Interactive Showcase Tab Switching
             const tabs = document.querySelectorAll('.showcase-tab');
