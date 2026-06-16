@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.formenindiahelp.org/sitemap.xml
+
+# Disallow admin/build paths (none exist, but good practice)
+Disallow: /.git/
+Disallow: /.github/
