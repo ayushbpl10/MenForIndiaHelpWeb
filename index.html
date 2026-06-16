@@ -796,8 +796,24 @@
             });
         });
                     // ── Interactive Phone Mockup Screen Switcher ──────────────────
-        function switchMockScreen(screenId) {
+        let currentMockScreenIdx = 0;
+        const mockScreens = ['dashboard', 'ai', 'guides'];
+        let mockScreenTimer = setInterval(autoSwitchMockScreen, 3500);
+
+        function autoSwitchMockScreen() {
+            currentMockScreenIdx = (currentMockScreenIdx + 1) % mockScreens.length;
+            switchMockScreen(mockScreens[currentMockScreenIdx], true);
+        }
+
+        function switchMockScreen(screenId, isAuto = false) {
+            if (!isAuto) {
+                clearInterval(mockScreenTimer);
+                currentMockScreenIdx = mockScreens.indexOf(screenId);
+            }
+            
             const phone = document.getElementById('interactive-phone');
+            if (!phone) return;
+            
             phone.querySelectorAll('.mock-screen').forEach(scr => scr.classList.remove('active'));
             phone.querySelectorAll('.phone-nav-btn').forEach(btn => btn.classList.remove('active'));
             
