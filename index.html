@@ -377,7 +377,57 @@
             </div>
         </section>
 
-        <section id="about" class="about container">
+                <!-- FAQ Section -->
+        <section id="faq" class="faq-section container">
+            <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+                <h2 data-i18n="faq_title" style="font-size: 36px; color: var(--navy); font-weight: 700;">Frequently Asked Questions</h2>
+                <p data-i18n="faq_subtitle" style="font-size: 16px; color: var(--text-secondary); margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto;">Find answers to common questions about the app's services, privacy, and operations.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q1">Is ForMenIndiaHelp free to use?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a1">Yes, ForMenIndiaHelp is 100% free, open-source, and contains no ads or subscription fees. It is built to serve men in legal distress with educational rights resources.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q2">What legal rights and topics are covered in the app?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a2">The app covers Indian law guides including Section 498A IPC (Cruelty), CrPC 125 (Maintenance), DV Act (Domestic Violence), Child Custody, Divorce, and Anticipatory Bail procedures.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q3">How does the AI Emotional Counsellor help?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">Powered by Google Gemini models, the AI bot acts as an empathetic emotional counsellor using evidence-based CBT (Cognitive Behavioral Therapy) and DBT TIPP crisis coping strategies to help reduce stress.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q4">Is my data safe and private inside the app?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a4">Yes, ForMenIndiaHelp operates on privacy-first principles. No account registration, email, or phone number is required. Your local searches and AI interactions remain completely confidential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="about" class="about container">
             <div class="glass-panel">
                 <h2 data-i18n="about_h2">Why we built this</h2>
                 <p data-i18n="about_p">Navigating the legal system can be overwhelming. This app was built to provide an accessible, organized, and reliable source of educational legal content and mental health support for men in India.</p>
@@ -437,7 +487,7 @@
     </footer>
 
     <script>
-        // ── i18n Translation System ──────────────────────────────────────
+                // ── i18n Translation System ──────────────────────────────────────
         const translations = {
             en: {
                 nav_features: 'Features', nav_about: 'About', nav_privacy: 'Privacy', nav_download: 'Download on Play Store',
@@ -446,12 +496,12 @@
                 hero_p: 'A comprehensive support application designed to educate and assist you regarding your legal rights in India. Navigate complex legal situations with confidence.',
                 hero_btn: 'Download Free on Google Play',
                 trust_live: '✅ Publicly Live on Google Play', trust_phase: 'Free Download',
-                tester_h2: 'ForMenIndiaHelp is Now Live on Google Play!',
-                tester_intro: 'The app is now publicly available — no invite or sign-up needed! Simply tap the button below to install it free on any Android 8.0+ device. Help us grow by sharing with friends and family.',
-                step1_h: 'Open Google Play Store', step1_p: 'Tap the button below on your Android phone. It will open the official ForMenIndiaHelp listing on the Google Play Store.', step1_btn: 'Download on Google Play',
-                step2_h: 'Install & Explore', step2_p: 'Tap <strong>"Install"</strong> and start exploring legal guides, AI counselling, emergency SOS, court judgment search, and much more — completely free.', step2_btn: 'View on Play Store',
-                step3_h: 'Share & Support', step3_p: 'Help other men in India discover this resource! Share the Play Store link with friends, family, or any community that could benefit.', step3_btn: 'Share the App',
-                tester_note: '⭐ <strong>Leave a Review:</strong> If you find the app helpful, please leave a 5-star rating and review on the Play Store. It helps more men in India discover this resource!',
+                tester_h2: 'Why Choose ForMenIndiaHelp?',
+                tester_intro: 'A modern, secure, and privacy-focused utility to help you protect your rights.',
+                step1_h: '🛡️ 100% Free & Open Source', step1_p: 'Built entirely as a public service. No hidden fees, no subscriptions, and code is fully open for transparency.', step1_btn: 'Download on Google Play',
+                step2_h: '🔒 Privacy-First Design', step2_p: 'No login, registration, phone number, or email required. Your searches, case numbers, and AI chat histories stay completely confidential on your device.', step2_btn: 'View on Play Store',
+                step3_h: '💾 100% Offline Access', step3_p: 'Read legal acts, 498A checklists, child custody articles, and emergency helplines even without an active internet connection.', step3_btn: 'Share the App',
+                tester_note: '🎉 <strong>Start Protecting Your Rights Today:</strong> Ready to install? Simply download directly from Google Play Store and get instant access to all features free.',
                 feat_badge: 'Published Features (v5)', feat_h2: 'Powerful Tools Right in Your Pocket', feat_p: 'Designed specifically to educate, protect, and support men in distress.',
                 f1_h: 'Offline Legal Knowledge Base', f1_p: 'Read extensive guides on sections like 498A IPC, CrPC 125, DV Act, and Child Custody without needing an active internet connection.',
                 f2_h: 'AI Emotional Counselling Bot', f2_p: 'Powered by Google Gemini. Tailored mental health support utilizing evidence-based CBT, ACT, and DBT TIPP crisis frameworks.',
@@ -462,21 +512,31 @@
                 about_h2: 'Why we built this', about_p: 'Navigating the legal system can be overwhelming. This app was built to provide an accessible, organized, and reliable source of educational legal content and mental health support for men in India.',
                 about_copy: 'Registered Copyright © 2026 ForMenIndiaHelp. All rights reserved.',
                 footer_tag: 'Empowering through education.', footer_legal: 'Legal', footer_privacy: 'Privacy Policy', footer_terms: 'Terms of Service', footer_copy: 'Copyright Policy', footer_contact: 'Contact',
-                footer_copy_notice: '© 2026 ForMenIndiaHelp. Not professional legal advice.'
+                footer_copy_notice: '© 2026 ForMenIndiaHelp. Not professional legal advice.',
+                faq_title: 'Frequently Asked Questions',
+                faq_subtitle: 'Find answers to common questions about the app's services, privacy, and operations.',
+                faq_q1: 'Is ForMenIndiaHelp free to use?',
+                faq_a1: 'Yes, ForMenIndiaHelp is 100% free, open-source, and contains no ads or subscription fees. It is built to serve men in legal distress with educational rights resources.',
+                faq_q2: 'What legal rights and topics are covered in the app?',
+                faq_a2: 'The app covers Indian law guides including Section 498A IPC (Cruelty), CrPC 125 (Maintenance), DV Act (Domestic Violence), Child Custody, Divorce, and Anticipatory Bail procedures.',
+                faq_q3: 'How does the AI Emotional Counsellor help?',
+                faq_a3: 'Powered by Google Gemini models, the AI bot acts as an empathetic emotional counsellor using evidence-based CBT (Cognitive Behavioral Therapy) and DBT TIPP crisis coping strategies to help reduce stress.',
+                faq_q4: 'Is my data safe and private inside the app?',
+                faq_a4: 'Yes, ForMenIndiaHelp operates on privacy-first principles. No account registration, email, or phone number is required. Your local searches and AI interactions remain completely confidential.'
             },
             hi: {
                 nav_features: 'सुविधाएं', nav_about: 'हमारे बारे में', nav_privacy: 'गोपनीयता', nav_download: 'Play Store पर डाउनलोड करें',
                 hero_badge: '🎉 v5 — अब Google Play पर सार्वजनिक रूप से उपलब्ध!',
                 hero_h1: 'पुरुषों को <span class="highlight">कानूनी ज्ञान</span> से सशक्त बनाना',
-                hero_p: 'भारत में आपके कानूनी अधिकारों के बारे में शिक्षित करने और सहायता करने के लिए बनाया गया एक व्यापक ऐप। आत्मविश्वास के साथ जटिल कानूनी परिस्थितियों में आगे बढ़ें।',
+                hero_p: 'भारत में आपके अधिकारों के बारे में शिक्षित और सहायता करने के लिए एक व्यापक ऐप। आत्मविश्वास के साथ जटिल कानूनी स्थितियों में आगे बढ़ें।',
                 hero_btn: 'Google Play पर मुफ्त डाउनलोड करें',
                 trust_live: '✅ Google Play पर सार्वजनिक रूप से लाइव', trust_phase: 'मुफ्त डाउनलोड',
-                tester_h2: 'ForMenIndiaHelp अब Google Play पर लाइव है!',
-                tester_intro: 'ऐप अब सार्वजनिक रूप से उपलब्ध है — किसी आमंत्रण या साइन-अप की ज़रूरत नहीं! किसी भी Android 8.0+ डिवाइस पर मुफ्त में इंस्टॉल करने के लिए नीचे बटन दबाएं।',
-                step1_h: 'Google Play Store खोलें', step1_p: 'अपने Android फोन पर नीचे दिए बटन को दबाएं। यह Google Play Store पर ForMenIndiaHelp की आधिकारिक लिस्टिंग खोलेगा।', step1_btn: 'Google Play पर डाउनलोड करें',
-                step2_h: 'इंस्टॉल करें और खोजें', step2_p: '<strong>"Install"</strong> दबाएं और कानूनी गाइड, AI काउंसलिंग, इमरजेंसी SOS, कोर्ट जजमेंट सर्च और बहुत कुछ एक्सप्लोर करें — बिल्कुल मुफ्त।', step2_btn: 'Play Store पर देखें',
-                step3_h: 'शेयर करें और सहायता करें', step3_p: 'भारत के अन्य पुरुषों को यह संसाधन खोजने में मदद करें! Play Store लिंक दोस्तों, परिवार या किसी भी समुदाय के साथ शेयर करें।', step3_btn: 'ऐप शेयर करें',
-                tester_note: '⭐ <strong>समीक्षा छोड़ें:</strong> यदि आपको ऐप सहायक लगे, तो Play Store पर 5-स्टार रेटिंग और समीक्षा दें। इससे भारत के अधिक पुरुष इस संसाधन को खोज सकेंगे!',
+                tester_h2: 'ForMenIndiaHelp क्यों चुनें?',
+                tester_intro: 'आपके अधिकारों की रक्षा करने में मदद करने के लिए एक आधुनिक, सुरक्षित और गोपनीयता-केंद्रित ऐप।',
+                step1_h: '🛡️ 100% मुफ्त और ओपन-सोर्स', step1_p: 'पूरी तरह से जनसेवा के रूप में निर्मित। कोई छिपी हुई फीस नहीं, कोई सदस्यता नहीं, और पारदर्शिता के लिए कोड पूरी तरह से ओपन है।', step1_btn: 'Google Play पर डाउनलोड करें',
+                step2_h: '🔒 गोपनीयता-प्रथम डिज़ाइन', step2_p: 'कोई लॉगिन, पंजीकरण, फोन नंबर या ईमेल की आवश्यकता नहीं है। आपकी खोज, केस नंबर और AI चैट इतिहास आपके डिवाइस पर पूरी तरह से गोपनीय रहते हैं।', step2_btn: 'Play Store पर देखें',
+                step3_h: '💾 100% ऑफलाइन पहुंच', step3_p: 'सक्रिय इंटरनेट कनेक्शन के बिना भी कानूनी धाराएं, 498A चेकलिस्ट, बाल हिरासत के लेख और आपातकालीन हेल्पलाइन पढ़ें।', step3_btn: 'ऐप शेयर करें',
+                tester_note: '🎉 <strong>आज ही अपने अधिकारों की रक्षा करना शुरू करें:</strong> इंस्टॉल करने के लिए तैयार हैं? बस Google Play Store से सीधे डाउनलोड करें और सभी सुविधाओं का मुफ्त में लाभ उठाएं।',
                 feat_badge: 'प्रकाशित सुविधाएं (v5)', feat_h2: 'आपकी जेब में शक्तिशाली उपकरण', feat_p: 'विशेष रूप से संकट में पुरुषों को शिक्षित, सुरक्षित और सहायता करने के लिए बनाया गया।',
                 f1_h: 'ऑफलाइन कानूनी ज्ञान आधार', f1_p: 'इंटरनेट कनेक्शन की आवश्यकता के बिना 498A IPC, CrPC 125, DV Act और बाल हिरासत पर विस्तृत गाइड पढ़ें।',
                 f2_h: 'AI भावनात्मक परामर्श बॉट', f2_p: 'Google Gemini द्वारा संचालित। CBT, ACT और DBT TIPP संकट ढांचे का उपयोग करते हुए अनुकूलित मानसिक स्वास्थ्य सहायता।',
@@ -487,7 +547,17 @@
                 about_h2: 'हमने यह क्यों बनाया', about_p: 'कानूनी प्रणाली को नेविगेट करना भारी पड़ सकता है। यह ऐप भारत में पुरुषों को सुलभ, व्यवस्थित और विश्वसनीय कानूनी सामग्री और मानसिक स्वास्थ्य सहायता प्रदान करने के लिए बनाया गया था।',
                 about_copy: 'पंजीकृत कॉपीराइट © 2026 ForMenIndiaHelp. सर्वाधिकार सुरक्षित।',
                 footer_tag: 'शिक्षा के माध्यम से सशक्तिकरण।', footer_legal: 'कानूनी', footer_privacy: 'गोपनीयता नीति', footer_terms: 'सेवा की शर्तें', footer_copy: 'कॉपीराइट नीति', footer_contact: 'संपर्क',
-                footer_copy_notice: '© 2026 ForMenIndiaHelp. यह पेशेवर कानूनी सलाह नहीं है।'
+                footer_copy_notice: '© 2026 ForMenIndiaHelp. यह पेशेवर कानूनी सलाह नहीं है।',
+                faq_title: 'अक्सर पूछे जाने वाले प्रश्न',
+                faq_subtitle: 'ऐप की सेवाओं, गोपनीयता और संचालन के बारे में सामान्य प्रश्नों के उत्तर खोजें।',
+                faq_q1: 'क्या ForMenIndiaHelp का उपयोग मुफ्त है?',
+                faq_a1: 'हाँ, ForMenIndiaHelp 100% मुफ्त, ओपन-सोर्स है और इसमें कोई विज्ञापन या सदस्यता शुल्क नहीं है। इसे कानूनी संकट में फंसे पुरुषों को शिक्षित करने के लिए बनाया गया है।',
+                faq_q2: 'ऐप में कौन से कानूनी विषय शामिल हैं?',
+                faq_a2: 'ऐप में भारतीय कानूनी गाइड शामिल हैं, जिनमें धारा 498A IPC (क्रूरता), CrPC 125 (भरण-पोषण), DV Act (घरेलू हिंसा), बाल हिरासत, तलाक और अग्रिम जमानत की प्रक्रियाएं शामिल हैं।',
+                faq_q3: 'AI भावनात्मक परामर्शदाता कैसे मदद करता है?',
+                faq_a3: 'Google Gemini मॉडल द्वारा संचालित, AI बॉट साक्ष्य-आधारित CBT (संज्ञानात्मक व्यवहार थेरेपी) और DBT TIPP संकट निपटने की रणनीतियों का उपयोग करके तनाव को कम करने में मदद करने के लिए एक सहानुभूतिपूर्ण भावनात्मक सलाहकार के रूप में काम करता है।',
+                faq_q4: 'क्या ऐप के भीतर मेरा डेटा सुरक्षित और गोपनीय है?',
+                faq_a4: 'हाँ, ForMenIndiaHelp गोपनीयता-प्रथम सिद्धांतों पर काम करता है। कोई खाता पंजीकरण, ईमेल या फोन नंबर की आवश्यकता नहीं है। आपकी खोज और AI की बातचीत पूरी तरह से गोपनीय रहती है।'
             }
         };
 
@@ -587,6 +657,24 @@
                 observer.observe(el);
             });
         });
-    </script>
+            // ── FAQ Accordion Toggle ──────────────────────────────────────
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const icon = btn.querySelector('ion-icon');
+            const isOpen = item.classList.toggle('open');
+            
+            if (isOpen) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.paddingBottom = '20px';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.style.maxHeight = '0px';
+                answer.style.paddingBottom = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+</script>
 </body>
 </html>
