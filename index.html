@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,26 +142,72 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <!-- A sleek glassmorphic card representing the app interface -->
-                <div class="glass-phone">
+                <!-- Interactive Phone Mockup -->
+                <div class="glass-phone" id="interactive-phone">
                     <div class="phone-header">
-                        <ion-icon name="shield"></ion-icon>
+                        <ion-icon name="shield-checkmark" style="color: var(--teal);"></ion-icon>
                         <span>ForMenIndiaHelp</span>
+                        <span class="phone-battery" style="margin-left: auto; display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--text-secondary);">
+                            100% <ion-icon name="battery-charging-outline" style="font-size: 14px; color: #0d9668;"></ion-icon>
+                        </span>
                     </div>
-                    <div class="phone-body">
-                        <div class="skeleton-line"></div>
-                        <div class="skeleton-card">
-                            <ion-icon name="book" style="color: #1a7fa8;"></ion-icon>
-                            <span>Legal Guides</span>
+                    <div class="phone-screen-container">
+                        <!-- Screen 1: Dashboard -->
+                        <div class="mock-screen active" id="screen-dashboard">
+                            <div class="mock-title">Dashboard</div>
+                            <div class="mock-scroll-content">
+                                <div class="grounding-card">
+                                    <div class="card-tag">Daily Grounding</div>
+                                    <p>"Take a deep breath. You are not alone. Focus on what you can control right now."</p>
+                                </div>
+                                <div class="mock-menu-grid">
+                                    <div class="menu-item" onclick="switchMockScreen('guides')">
+                                        <ion-icon name="book-outline"></ion-icon>
+                                        <span>Guides</span>
+                                    </div>
+                                    <div class="menu-item" onclick="switchMockScreen('ai')">
+                                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                                        <span>AI Bot</span>
+                                    </div>
+                                    <div class="menu-item">
+                                        <ion-icon name="call-outline" style="color: #c0392b;"></ion-icon>
+                                        <span>SOS Helpline</span>
+                                    </div>
+                                    <div class="menu-item">
+                                        <ion-icon name="search-outline"></ion-icon>
+                                        <span>Kanoon</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skeleton-card">
-                            <ion-icon name="chatbubbles" style="color: #0d9668;"></ion-icon>
-                            <span>AI Assistant</span>
+                        <!-- Screen 2: AI Bot -->
+                        <div class="mock-screen" id="screen-ai">
+                            <div class="mock-title">AI Counselling</div>
+                            <div class="mock-chat-area">
+                                <div class="msg bot">Hello, I'm your Gemini-powered advisor. How can I help reduce your stress today?</div>
+                                <div class="msg user">I feel overwhelmed by the false cases threat...</div>
+                                <div class="msg bot">It is completely understandable. Let's focus on structured steps: 1. Record evidence, 2. Focus on health, 3. Call a support group.</div>
+                            </div>
                         </div>
-                        <div class="skeleton-card">
-                            <ion-icon name="videocam" style="color: #c0392b;"></ion-icon>
-                            <span>Video Docs</span>
+                        <!-- Screen 3: Guides -->
+                        <div class="mock-screen" id="screen-guides">
+                            <div class="mock-title">Legal Guides</div>
+                            <div class="mock-scroll-content">
+                                <div class="guide-item active">
+                                    <h4>Section 498A IPC</h4>
+                                    <p>Comprehensive guide to protect family members from arrest threats.</p>
+                                </div>
+                                <div class="guide-item">
+                                    <h4>CrPC 125 Maintenance</h4>
+                                    <p>Step-by-step documentation required for fair maintenance calculations.</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="phone-navbar-mock">
+                        <button class="phone-nav-btn active" onclick="switchMockScreen('dashboard')"><ion-icon name="home-outline"></ion-icon></button>
+                        <button class="phone-nav-btn" onclick="switchMockScreen('ai')"><ion-icon name="chatbubbles-outline"></ion-icon></button>
+                        <button class="phone-nav-btn" onclick="switchMockScreen('guides')"><ion-icon name="book-outline"></ion-icon></button>
                     </div>
                 </div>
             </div>
@@ -270,7 +315,43 @@
             </div>
         </section>
 
-        <!-- App Screenshots Carousel -->
+                <!-- AI Chat Simulator Section -->
+        <section class="ai-simulator-section" id="ai-simulator">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                    <div class="badge" data-i18n="sim_badge">Interactive Demo</div>
+                    <h2 data-i18n="sim_h2">Try Our AI Emotional Counsellor</h2>
+                    <p data-i18n="sim_p">Get immediate grounding and legal coping strategies. Click a topic below to see a response.</p>
+                </div>
+                
+                <div class="simulator-container">
+                    <div class="sim-header">
+                        <div class="sticky-bar-logo"><ion-icon name="chatbubbles-outline"></ion-icon></div>
+                        <div class="sim-header-info">
+                            <h3 data-i18n="sim_agent_name">FMIH Legal Support AI</h3>
+                            <span data-i18n="sim_agent_status">● Powered by Google Gemini</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sim-chat-window" id="simChatWindow">
+                        <div class="sim-msg bot" data-i18n="sim_initial_msg">
+                            Hello! I am your ForMenIndiaHelp AI counsellor. I am trained in CBT, ACT, and DBT crisis protocols to help you stay calm and think clearly. Select a question below to see how I can guide you.
+                        </div>
+                    </div>
+                    
+                    <div class="sim-options-panel">
+                        <div class="sim-options-title" data-i18n="sim_options_title">Select a query to simulate:</div>
+                        <div class="sim-options-grid">
+                            <button class="sim-option-btn" onclick="runSimOption('q1')">🛡️ How do I protect my family from a false 498A threat?</button>
+                            <button class="sim-option-btn" onclick="runSimOption('q2')">❤️ I feel extremely anxious and depressed because of court stress. Help.</button>
+                            <button class="sim-option-btn" onclick="runSimOption('q3')">🔍 What is the CNR case status search?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- App Screenshots Carousel -->
         <section class="showcase-section" id="showcase" aria-label="App Screenshots">
             <div class="container">
                 <div class="section-header">
@@ -377,7 +458,64 @@
             </div>
         </section>
 
-                <!-- FAQ Section -->
+                        <!-- Legal Self-Assessment Wizard -->
+        <section class="wizard-section container" id="wizard">
+            <div class="glass-panel wizard-card">
+                <div class="section-header" style="margin-bottom: 24px;">
+                    <div class="badge">Legal Assessment</div>
+                    <h2>Instant Legal Safety Check-up</h2>
+                    <p>Answer a few quick questions to receive a custom roadmap of immediate actions you should take.</p>
+                </div>
+                
+                <div class="wizard-steps-container">
+                    <!-- Step 1: Legal Challenge -->
+                    <div class="wizard-step active" id="wizardStep1">
+                        <h3 style="font-size: 18px; color: var(--navy); margin-bottom: 12px;">Step 1: Select the main legal challenge you are facing:</h3>
+                        <div class="wizard-options-grid">
+                            <button class="wizard-btn" onclick="wizardNextStep(2, 'threat')">
+                                <h4>🛡️ False Allegations / Threats</h4>
+                                <p>Falsely threatened with 498A IPC, Domestic Violence, or maintenance cases.</p>
+                            </button>
+                            <button class="wizard-btn" onclick="wizardNextStep(2, 'ongoing')">
+                                <h4>⚖️ Ongoing Court Trial</h4>
+                                <p>Summons received or charge-sheet already filed in court.</p>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Case Stage -->
+                    <div class="wizard-step" id="wizardStep2">
+                        <h3 style="font-size: 18px; color: var(--navy); margin-bottom: 12px;">Step 2: What is the current stage of the dispute?</h3>
+                        <div class="wizard-options-grid">
+                            <button class="wizard-btn" onclick="wizardNextStep(3, 'threat')">
+                                <h4>📢 Under Threat / Preliminary stage</h4>
+                                <p>No FIR filed yet, but threat of blackmail or family arrest is active.</p>
+                            </button>
+                            <button class="wizard-btn" onclick="wizardNextStep(3, 'ongoing')">
+                                <h4>🏛️ FIR Registered / Summons Active</h4>
+                                <p>Official legal case initiated, police summons, or hearings scheduled.</p>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Result Summary -->
+                    <div class="wizard-step" id="wizardResult">
+                        <h3 style="font-size: 18px; color: var(--navy); margin-bottom: 12px;">🛡️ Your Immediate Action Checklist:</h3>
+                        <div class="wizard-timeline" id="wizardTimeline">
+                            <!-- Dynamically populated -->
+                        </div>
+                        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+                            <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <ion-icon name="logo-google-playstore"></ion-icon> Get Free App for Full Guides
+                            </a>
+                            <button class="btn btn-secondary" onclick="resetWizard()">Start Over</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- FAQ Section -->
         <section id="faq" class="faq-section container">
             <div class="section-header" style="text-align: center; margin-bottom: 48px;">
                 <h2 data-i18n="faq_title" style="font-size: 36px; color: var(--navy); font-weight: 700;">Frequently Asked Questions</h2>
@@ -514,7 +652,7 @@
                 footer_tag: 'Empowering through education.', footer_legal: 'Legal', footer_privacy: 'Privacy Policy', footer_terms: 'Terms of Service', footer_copy: 'Copyright Policy', footer_contact: 'Contact',
                 footer_copy_notice: '© 2026 ForMenIndiaHelp. Not professional legal advice.',
                 faq_title: 'Frequently Asked Questions',
-                faq_subtitle: 'Find answers to common questions about the app's services, privacy, and operations.',
+                faq_subtitle: "Find answers to common questions about the app's services, privacy, and operations.",
                 faq_q1: 'Is ForMenIndiaHelp free to use?',
                 faq_a1: 'Yes, ForMenIndiaHelp is 100% free, open-source, and contains no ads or subscription fees. It is built to serve men in legal distress with educational rights resources.',
                 faq_q2: 'What legal rights and topics are covered in the app?',
@@ -657,7 +795,179 @@
                 observer.observe(el);
             });
         });
-            // ── FAQ Accordion Toggle ──────────────────────────────────────
+                    // ── Interactive Phone Mockup Screen Switcher ──────────────────
+        function switchMockScreen(screenId) {
+            const phone = document.getElementById('interactive-phone');
+            phone.querySelectorAll('.mock-screen').forEach(scr => scr.classList.remove('active'));
+            phone.querySelectorAll('.phone-nav-btn').forEach(btn => btn.classList.remove('active'));
+            
+            const targetScreen = phone.querySelector('#screen-' + screenId);
+            if (targetScreen) targetScreen.classList.add('active');
+            
+            // Highlight active button
+            const activeBtn = Array.from(phone.querySelectorAll('.phone-nav-btn')).find(btn => 
+                btn.getAttribute('onclick').includes(screenId)
+            );
+            if (activeBtn) activeBtn.classList.add('active');
+        }
+
+        // ── AI Chat Simulator Logic ───────────────────────────────────
+        const simResponses = {
+            hi: {
+                q1: "भारत में 498A के झूठे मामलों से बचाव के लिए: 1. सभी संचार रिकॉर्ड करें (कॉल, व्हाट्सएप संदेश)। 2. अपने और अपने परिवार की वित्तीय आत्मनिर्भरता के प्रमाण सुरक्षित रखें। 3. पुलिस में शिकायत दर्ज होने से पहले ही अपने क्षेत्र के वरिष्ठ अधिकारियों (DCP/SP) को लिखित रूप में झूठे आरोप की सूचना दें। 4. अग्रिम जमानत (Anticipatory Bail) के लिए वकील से संपर्क करें।",
+                q2: "अत्यधिक मानसिक तनाव होने पर: 1. यह समझें कि कानूनी लड़ाई एक प्रक्रिया है, जीवन का अंत नहीं। 2. हमारे 'Emergency Helplines' टैब में जाकर Save Indian Family या Vandrevala Foundation के काउंसलर्स से संपर्क करें। 3. परिवार और करीबी दोस्तों से बात करें। 4. दैनिक ध्यान और शारीरिक गतिविधि करें।",
+                q3: "CNR (Case Status) सर्च से आप भारत के किसी भी कोर्ट में चल रहे केस की लाइव जानकारी प्राप्त कर सकते हैं। ForMenIndiaHelp ऐप में eCourts CNR Assistant है, जो 1-क्लिक में नंबर कॉपी कर लाइव स्टेटस दिखाता है।"
+            },
+            en: {
+                q1: "To protect yourself from false 498A threats in India: 1. Record all communications (calls, chats, emails). 2. Keep records of your financial independent assets and expenses. 3. Submit a written representation to the senior police officials (DCP/SP) before an FIR is lodged to report blackmail/threats. 4. Speak with a reliable legal advocate regarding Anticipatory Bail.",
+                q2: "If you feel overwhelmed by court dates and anxiety: 1. Remember, litigation is a process, not your identity. 2. Navigate to our Helpline section to instantly connect with Save Indian Family or iCall TISS for free counseling. 3. Build a support circle. 4. Focus on grounding exercises like deep breathing.",
+                q3: "CNR Search lets you access real-time case proceedings from the eCourts judiciary portal. The ForMenIndiaHelp app provides a 1-Click CNR Copy Assistant to fetch details automatically."
+            }
+        };
+
+        let isTyping = false;
+        function runSimOption(optionKey) {
+            if (isTyping) return;
+            const chatWindow = document.getElementById('simChatWindow');
+            const lang = currentLang;
+            
+            // Get question text from button
+            const btn = Array.from(document.querySelectorAll('.sim-option-btn')).find(b => 
+                b.getAttribute('onclick').includes(optionKey)
+            );
+            const userText = btn ? btn.textContent.trim() : "...";
+            
+            // Append User Message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'sim-msg user';
+            userMsg.textContent = userText;
+            chatWindow.appendChild(userMsg);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+            
+            // Append Typing Indicator
+            isTyping = true;
+            const indicator = document.createElement('div');
+            indicator.className = 'typing-indicator';
+            indicator.innerHTML = '<span></span><span></span><span></span>';
+            chatWindow.appendChild(indicator);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+            
+            setTimeout(() => {
+                chatWindow.removeChild(indicator);
+                
+                // Append Bot Message
+                const botMsg = document.createElement('div');
+                botMsg.className = 'sim-msg bot';
+                botMsg.textContent = simResponses[lang][optionKey] || simResponses['en'][optionKey];
+                chatWindow.appendChild(botMsg);
+                
+                // Append download prompt inside bot message
+                const ctaPrompt = document.createElement('div');
+                ctaPrompt.style.marginTop = '10px';
+                ctaPrompt.style.fontSize = '12px';
+                ctaPrompt.style.fontWeight = 'bold';
+                ctaPrompt.style.color = 'var(--teal)';
+                ctaPrompt.innerHTML = lang === 'hi' ? 
+                    '💡 ForMenIndiaHelp ऐप डाउनलोड करें और पूर्ण AI गाइडेंस और सहायता बिल्कुल मुफ्त पाएं।' :
+                    '💡 Download the ForMenIndiaHelp app to chat live with our AI Emotional Counsellor and access full offline guides free.';
+                botMsg.appendChild(ctaPrompt);
+                
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+                isTyping = false;
+            }, 1200);
+        }
+
+        // ── Legal Self-Assessment Wizard ─────────────────────────────
+        let wizardData = {
+            issue: null,
+            stage: null
+        };
+
+        function wizardNextStep(stepNum, val) {
+            if (stepNum === 2) {
+                wizardData.issue = val;
+                document.getElementById('wizardStep1').classList.remove('active');
+                document.getElementById('wizardStep2').classList.add('active');
+            } else if (stepNum === 3) {
+                wizardData.stage = val;
+                document.getElementById('wizardStep2').classList.remove('active');
+                showWizardResult();
+            }
+        }
+
+        function resetWizard() {
+            wizardData = { issue: null, stage: null };
+            document.getElementById('wizardResult').classList.remove('active');
+            document.getElementById('wizardStep1').classList.add('active');
+        }
+
+        function showWizardResult() {
+            const resBox = document.getElementById('wizardResult');
+            const timeline = document.getElementById('wizardTimeline');
+            timeline.innerHTML = '';
+            
+            const steps = {
+                hi: {
+                    threat: [
+                        { h: "1. साक्ष्य सुरक्षित करें", p: "सभी फोन कॉल कॉल रिकॉर्डर से सहेजें। व्हाट्सएप चैट का एक्सपोर्ट बैकअप लें।" },
+                        { h: "2. अग्रिम शिकायत पत्र", p: "अपने स्थानीय पुलिस अधीक्षक (SP) या महिला सेल प्रमुख को जबरन वसूली / धमकी की शिकायत लिखित में दें।" },
+                        { h: "3. मानसिक स्वास्थ्य बनाए रखें", p: "ForMenIndiaHelp ऐप डाउनलोड करें और आपातकालीन परामर्शदाताओं से जुड़ें।" }
+                    ],
+                    ongoing: [
+                        { h: "1. चार्जशीट / सम्मन का विश्लेषण करें", p: "आरोप पत्र की प्रति प्राप्त कर प्रत्येक आरोप के खिलाफ सबूत इकट्ठा करें।" },
+                        { h: "2. निरंतर उपस्थिति", p: "न्यायालय में पेशी न छोड़ें। यदि आवश्यक हो तो वकील के माध्यम से छूट का आवेदन करें।" },
+                        { h: "3. CNR नंबर ट्रैक करें", p: "ForMenIndiaHelp ऐप के इन-ऐप eCourts CNR पोर्टल का उपयोग कर लाइव स्थिति जांचें।" }
+                    ]
+                },
+                en: {
+                    threat: [
+                        { h: "1. Secure All Digital Evidence", p: "Enable call recording on your phone. Take screenshot backups of chats and email correspondence." },
+                        { h: "2. File a Police Representation", p: "Submit a formal written petition to the SP/DCP office outlining threats of false implication for extortion." },
+                        { h: "3. Access Crisis Support", p: "Open the ForMenIndiaHelp emergency tab to speak with Save Indian Family counsellors." }
+                    ],
+                    ongoing: [
+                        { h: "1. Gather Charge-sheet Discrepancies", p: "Study the allegations and note contradictions with your saved digital proof/timelines." },
+                        { h: "2. Avoid Default Judgments", p: "Ensure representations are submitted on time. Use the CNR Copy Assistant to never miss hearings." },
+                        { h: "3. Legal Research", p: "Search and download relevant quashing judgments from High Courts via our live IndianKanoon search." }
+                    ]
+                }
+            };
+            
+            const lang = currentLang;
+            const currentSteps = steps[lang] ? steps[lang][wizardData.stage] || steps[lang]['threat'] : steps['en']['threat'];
+            
+            currentSteps.forEach(st => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item';
+                item.innerHTML = `<span class="timeline-dot"></span><h4>${st.h}</h4><p>${st.p}</p>`;
+                timeline.appendChild(item);
+            });
+            
+            resBox.classList.add('active');
+        }
+
+        // ── Sticky bottom download bar ────────────────────────────────
+        window.addEventListener('scroll', () => {
+            const bar = document.getElementById('stickyDownloadBar');
+            if (!bar) return;
+            const isDismissed = localStorage.getItem('fmih_sticky_dismissed') === 'true';
+            if (isDismissed) return;
+            
+            if (window.scrollY > 400) {
+                bar.style.bottom = '20px';
+            } else {
+                bar.style.bottom = '-120px';
+            }
+        });
+
+        function dismissStickyBar() {
+            const bar = document.getElementById('stickyDownloadBar');
+            if (bar) bar.style.bottom = '-120px';
+            localStorage.setItem('fmih_sticky_dismissed', 'true');
+        }
+
+
+        // ── FAQ Accordion Toggle ──────────────────────────────────────
         function toggleFaq(btn) {
             const item = btn.parentElement;
             const answer = item.querySelector('.faq-answer');
@@ -676,5 +986,21 @@
         }
         
 </script>
+    <!-- Sticky Bottom Conversion Bar -->
+    <div class="sticky-bar" id="stickyDownloadBar">
+        <div class="sticky-bar-content">
+            <div class="sticky-bar-info">
+                <div class="sticky-bar-logo"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
+                <div class="sticky-bar-text">
+                    <h4>ForMenIndiaHelp App</h4>
+                    <p>⭐⭐⭐⭐⭐ 4.9 · Free & Offline Legal Guides</p>
+                </div>
+            </div>
+            <div class="sticky-bar-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.formenindiahelp.app" target="_blank" rel="noopener noreferrer" class="nav-btn" style="box-shadow: none;">Install Free</a>
+                <button class="sticky-bar-close" onclick="dismissStickyBar()" aria-label="Dismiss banner"><ion-icon name="close-outline"></ion-icon></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
